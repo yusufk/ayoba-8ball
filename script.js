@@ -14,7 +14,9 @@ $(document).ready(function(){
       $("#8ball").effect( "shake" );
       $("#answer").text( answer );
       $("#answer").fadeIn(3000);
-      $("#shareButton").show();
+      if (typeof Ayoba.sendMessage === "function") {
+        $("#shareButton").show();
+      }
       $("#8ball").attr("src", "img/answerside.png");
   
       console.log(question);
@@ -47,7 +49,7 @@ function getAyoba() {
    }
  
    if (/android/i.test(userAgent)) {
-       return "Android";
+       return Android;
    }
  
    // iOS detection from: http://stackoverflow.com/a/9039885/177710
