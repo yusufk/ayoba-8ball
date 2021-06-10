@@ -14,7 +14,7 @@ $(document).ready(function(){
       $("#8ball").effect( "shake" );
       $("#answer").text( answer );
       $("#answer").fadeIn(3000);
-      if (typeof Ayoba.sendMessage === "function") {
+      if (Ayoba != null) {
         $("#shareButton").show();
       }
       $("#8ball").attr("src", "img/answerside.png");
@@ -33,7 +33,9 @@ $(document).ready(function(){
     };
     
     $("#questionButton").click( onClick );
-    $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
+    if (Ayoba != null) {
+        $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
+    }
   });
  
 /**
@@ -49,7 +51,11 @@ function getAyoba() {
    }
  
    if (/android/i.test(userAgent)) {
-       return Android;
+       try {
+            return Android;
+       } catch (error) {
+          return null; 
+       }
    }
  
    // iOS detection from: http://stackoverflow.com/a/9039885/177710
