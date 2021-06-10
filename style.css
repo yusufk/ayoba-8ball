@@ -35,10 +35,11 @@
   }
   .answer {
     color: rgb(98, 143, 146);
+    font-weight: bold;
     text-transform: uppercase;
     margin: 0;
     position: absolute;
-    top: 38%;
+    top: 43%;
     left: 46%;
     width: 11%;
     font-size: 80%;
