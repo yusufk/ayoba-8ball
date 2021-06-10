@@ -1,4 +1,6 @@
 .page {
+    max-width: 960px;
+    min-width: 300px;
     margin: 0 auto;
   }
   
@@ -29,6 +31,7 @@
   }
   .ball img{
     width: 100%;
+    max-width: 80em;
   }
   .answer {
     color: rgb(98, 143, 146);
@@ -51,7 +54,28 @@
     border: none;
     padding: .5em 1em;
     width: 80%;
+    max-width: 20em;
     margin-top: 1em;
+  }
+
+  #shareButton {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    font-size: 1.875em;
+    color: #f8f8f8;
+    background-color: #06579b;
+    border-radius: 5px;
+    border: none;
+    padding: .5em 1em;
+    width: 80%;
+    max-width: 20em;
+    margin-top: 1em;
+  }
+
+  #closeButton {
+    position: absolute;
+    right: 10px;
+    top: 5px; 
   }
   
   footer p {
