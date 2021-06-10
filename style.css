@@ -1,6 +1,4 @@
 .page {
-    max-width: 960px;
-    min-width: 300px;
     margin: 0 auto;
   }
   
@@ -31,7 +29,6 @@
   }
   .ball img{
     width: 100%;
-    max-width: 40em;
   }
   .answer {
     color: rgb(98, 143, 146);
@@ -54,7 +51,6 @@
     border: none;
     padding: .5em 1em;
     width: 80%;
-    max-width: 15em;
     margin-top: 1em;
   }
   
