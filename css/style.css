@@ -32,18 +32,20 @@
   .ball img{
     width: 100%;
     max-width: 80em;
+    height: auto;
   }
   .answer {
     color: rgb(98, 143, 146);
     font-weight: bold;
     text-transform: uppercase;
-    margin: 0;
-    position: absolute;
-    top: 38%;
-    left: 45%;
-    width: 11%;
-    font-size: 60%;
     text-align: center;
+    margin: 0;
+    width: 11%;
+    font-size: 80%;
+    position: absolute;
+    top: 50%;
+    left:  50%;
+    transform: translate(-50%, -50%);
   }
   /*
   #questionButton {
