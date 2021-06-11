@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var Ayoba = getAyoba();
-    var pathname = window.location.pathname;
+    var pathname = window.location.search;
 
     $("#shareButton").hide();
     $("#closeButton").hide();
@@ -36,7 +36,6 @@ $(document).ready(function(){
       magic8Ball.getAnswer(question);
     };
     $("#questionButton").click( onClick );
-
     $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
     $("#closeButton").click( Ayoba.finish() );
   });
