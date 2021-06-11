@@ -1,7 +1,9 @@
 $(document).ready(function(){
     var Ayoba = getAyoba();
+    var pathname = window.location.pathname;
 
     $("#shareButton").hide();
+    $("#closeButton").hide();
     var magic8Ball = {};
     magic8Ball.listofanswers = ["It is certain.", "It is decidedly so.", "Without a doubt.", "Yes, definitely.", "You may rely on it.", "As I see it, yes.", "Most likely.", "Outlook good.", "Yes.", "Signs point to yes.", "Reply hazy, try again.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don't count on it.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Very doubtful."];
    
@@ -14,8 +16,9 @@ $(document).ready(function(){
       $("#8ball").effect( "shake" );
       $("#answer").text( answer );
       $("#answer").fadeIn(3000);
-      if (Ayoba != null) {
+      if (pathname.includes("jid")) {
         $("#shareButton").show();
+        $("#closeButton").show();
       }
       $("#8ball").attr("src", "img/answerside.png");
   
@@ -32,16 +35,10 @@ $(document).ready(function(){
       question = $("#inputText").val();
       magic8Ball.getAnswer(question);
     };
-    
     $("#questionButton").click( onClick );
-    if (Ayoba != null) {
-        $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
-    };
 
-    $("#closeButton").click( onClick );
-    if (Ayoba != null) {
-        $("#shareButton").click( Ayoba.finish() );
-    }
+    $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
+    $("#closeButton").click( Ayoba.finish() );
   });
  
 /**
