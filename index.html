@@ -3,41 +3,50 @@
 	  <title>MAGIC 8 BALL</title>
 
 	  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
-	  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js'></script>
-	  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-
-	  <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="lib/jquery-3.2.1.slim.min.js"></script>
+      <script src="lib/popper.min.js"></script>
+      <script src="lib/bootstrap.min.js"></script>
+      <script src="lib/jquery.min.js"></script>
+      <script src="lib/jquery-ui.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./css/bootstrap.min.css">
+	  <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="css/jquery-ui.min.css">
 	</head>
 
 	<body>
-		<div class="page">
+        <div class="jumbotron">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="What do you want to know?" id="inputText"/>
+            <div class="input-group-append">
+                <div class="button">
+                    <button id="questionButton" class="btn btn-primary">ASK ME ANYTHING </button>
+                </div>
+            </div>
+        </div>
 
-            <div class="button">
-				<button id="closeButton">X</button>
-			</div>
+        <div class="button">
+            <button id="closeButton">X</button>
+        </div>
 
-			<header>
-				<h1>MAGIC&nbsp;<span>8</span>&nbsp;BALL</h1>
-			</header>
+        <!--<header>
+            <h1>MAGIC&nbsp;<span>8</span>&nbsp;BALL</h1>
+        </header>-->
 
-			<div class="ball">
-				<img id="8ball" src="img/magic8ballQuestion.png">
-				<p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
-			</div>
+        <div class="ball">
+            <img id="8ball" src="img/magic8ballQuestion.png">
+            <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p></img>
+        </div>
 
-            <div class="button">
-				<button id="shareButton">SHARE RESULT</button>
-			</div>
+        <div class="button">
+            <button id="shareButton">SHARE RESULT</button>
+        </div>
 
-			<div class="button">
-				<button id="questionButton">ASK ME ANYTHING </button>
-			</div>
+        <footer>
+            <p>&copy; ayoba 2021</p>
+        </footer>
 
-			<footer>
-				<p>&copy; ayoba 2021</p>
-			</footer>
-
-		  <script type="text/javascript" src="script.js"></script>
-	  </div>
+        <script type="text/javascript" src="script.js"></script>
+    </div>
 	</body>
 </html>

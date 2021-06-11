@@ -23,12 +23,13 @@ $(document).ready(function(){
       console.log(answer);
     };
     $("#answer").hide();
-  
+    
+    var question;
     var onClick = function()
     {
       $("#answer").hide();
       $("#8ball").attr("src", "img/magic8ballQuestion.png");
-      var question = prompt("What do you want to know?");
+      question = $("#inputText").val();
       magic8Ball.getAnswer(question);
     };
     
