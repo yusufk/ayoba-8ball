@@ -36,6 +36,11 @@ $(document).ready(function(){
     $("#questionButton").click( onClick );
     if (Ayoba != null) {
         $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
+    };
+
+    $("#closeButton").click( onClick );
+    if (Ayoba != null) {
+        $("#shareButton").click( Ayoba.finish() );
     }
   });
  
