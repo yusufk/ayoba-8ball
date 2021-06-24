@@ -36,8 +36,12 @@ $(document).ready(function(){
       magic8Ball.getAnswer(question);
     };
     $("#questionButton").click( onClick );
-    $("#shareButton").click( Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) );
-    $("#closeButton").click( Ayoba.finish() );
+    $("#shareButton").click( function() {
+      Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) 
+    });
+    $("#closeButton").click( function() {
+      Ayoba.finish()
+    });
   });
  
 /**
