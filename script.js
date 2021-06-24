@@ -23,17 +23,19 @@ $(document).ready(function(){
       $("#8ball").attr("src", "img/answerside.png");
   
       console.log(question);
-      console.log(answer);
+      return answer;
     };
     $("#answer").hide();
     
     var question;
+    var answer;
     var onClick = function()
     {
       $("#answer").hide();
       $("#8ball").attr("src", "img/magic8ballQuestion.png");
       question = $("#inputText").val();
-      magic8Ball.getAnswer(question);
+      answer = magic8Ball.getAnswer(question);
+      console.log(answer);
     };
     $("#questionButton").click( onClick );
     $("#shareButton").click( function() {
