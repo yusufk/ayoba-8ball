@@ -15,38 +15,38 @@
 	</head>
 
 	<body>
-        <div class="jumbotron">
-        <div class="input-group">
-            <input type="text" class="form-control" id="inputText"/>
-            <div class="input-group-append">
-                <div class="button">
-                    <button id="questionButton" class="btn btn-primary">ASK ME ANYTHING </button><br/>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <button type="button" id="shareButton" class="btn btn-warning">SHARE</button>
+                </div>
+                <div class="col">
+                    <button type="button" id="closeButton" class="btn btn-danger float-right">CLOSE</button>
                 </div>
             </div>
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputText"/>
+                            <div class="input-group-append">
+                                <button type="button" id="questionButton" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Ask me anything!">ASK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ball">
+                    <img id="8ball" src="img/magic8ballQuestion.png"/>
+                    <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy; ayoba 2021</p>
+            </footer>
         </div>
-
-        <div class="button">
-            <button id="shareButton" class="btn btn-warning">SHARE RESULT</button>
-        </div>
-
-        <div class="button">
-            <button id="closeButton">X</button>
-        </div><br/>
-
-        <!--<header>
-            <h1>MAGIC&nbsp;<span>8</span>&nbsp;BALL</h1>
-        </header>-->
-
-        <div class="ball">
-            <img id="8ball" src="img/magic8ballQuestion.png"/>
-            <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
-        </div>
-
-        <footer>
-            <p>&copy; ayoba 2021</p>
-        </footer>
-
-        <script type="text/javascript" src="script.js"></script>
-    </div>
+            <script type="text/javascript" src="script.js"></script>
 	</body>
 </html>
