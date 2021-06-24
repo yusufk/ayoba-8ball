@@ -1,52 +1,56 @@
 <html>
-	<head>
-	  <title>MAGIC 8 BALL</title>
 
-	  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
-      <script src="lib/jquery-3.2.1.slim.min.js"></script>
-      <script src="lib/popper.min.js"></script>
-      <script src="lib/bootstrap.min.js"></script>
-      <script src="lib/jquery.min.js"></script>
-      <script src="lib/jquery-ui.min.js"></script>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="./css/bootstrap.min.css">
-	  <link rel="stylesheet" href="./css/style.css">
-      <link rel="stylesheet" href="css/jquery-ui.min.css">
-	</head>
+<head>
+    <title>MAGIC 8 BALL</title>
 
-	<body>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <button type="button" id="shareButton" class="btn btn-warning">SHARE</button>
-                </div>
-                <div class="col">
-                    <button type="button" id="closeButton" class="btn btn-danger float-right">CLOSE</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <div class="jumbotron">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputText"/>
-                            <div class="input-group-append">
-                                <button type="button" id="questionButton" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Ask me anything!">ASK</button>
-                            </div>
-                        </div>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Montserrat:400,700' rel='stylesheet'
+        type='text/css'>
+    <script src="lib/jquery-3.2.1.slim.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="input-group" id="inputForm">
+                    <input type="text" class="form-control" id="inputText" placeholder="Ask me anything..." />
+                    <div class="input-group-append">
+                        <button type="button" id="questionButton" class="btn btn-primary" data-toggle="tooltip"
+                            data-placement="top" title="Ask me anything!">ASK</button>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="ball">
-                    <img id="8ball" src="img/magic8ballQuestion.png"/>
-                    <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
-                </div>
-            </div>
-
-            <footer>
-                <p>&copy; ayoba 2021</p>
-            </footer>
         </div>
-            <script type="text/javascript" src="script.js"></script>
-	</body>
+        <div class="row">
+            <div class="col">
+                <button type="button" id="shareButton" class="btn btn-warning">SHARE</button>
+            </div>
+            <div class="col">
+                <button type="button" id="closeButton" class="btn btn-danger float-right">CLOSE</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="ball">
+                <img id="8ball" src="img/magic8ballQuestion.png" class="img-fluid" />
+                <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; ayoba 2021</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
 </html>

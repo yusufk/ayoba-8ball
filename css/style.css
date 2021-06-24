@@ -29,11 +29,6 @@
   .ball {
   position: relative;
   }
-  .ball img{
-    width: 100%;
-    max-width: 80em;
-    height: auto;
-  }
   .answer {
     color: rgb(98, 143, 146);
     font-weight: bold;
