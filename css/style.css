@@ -76,6 +76,13 @@
     margin-top: 1em;
   }
 */
+
+  #shareButton {
+    position: absolute;
+    left: 10px;
+    top: 5px; 
+  }
+
   #closeButton {
     position: absolute;
     right: 10px;
