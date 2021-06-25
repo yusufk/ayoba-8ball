@@ -39,7 +39,7 @@ $(document).ready(function(){
     };
     $("#questionButton").click( onClick );
     $("#shareButton").click( function() {
-      Ayoba.sendMessage("Question: "+ question + "\nAnswer: "+ answer) 
+      Ayoba.sendMessage("Question: "+ question + "\nMagic 8 ball says: "+ answer) 
     });
     $("#closeButton").click( function() {
       Ayoba.finish()
