@@ -39,7 +39,8 @@ $(document).ready(function(){
     };
     $("#questionButton").click( onClick );
     $("#shareButton").click( function() {
-      Ayoba.sendMessage("Question: "+ question + "\nMagic 8 ball says: "+ answer) 
+      Ayoba.sendMedia("magic8_logo.png");
+      Ayoba.sendMessage("Question: "+ question + "\nMagic 8 ball says: "+ answer);
     });
     $("#closeButton").click( function() {
       Ayoba.finish()
