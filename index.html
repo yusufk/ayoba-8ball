@@ -13,12 +13,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/theme.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
+            <div class="ball">
+                <img id="8ball" src="img/magic8ballQuestion.png" class="img-fluid" />
+                <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
+            </div>
+        </div>
+        <div class="row" id="input-row">
             <div class="col">
                 <div class="input-group" id="inputForm">
                     <input type="text" class="form-control" id="inputText" placeholder="Ask me anything..." />
@@ -37,17 +44,9 @@
                 <button type="button" id="closeButton" class="btn btn-danger float-right">CLOSE</button>
             </div>
         </div>
-
-        <div class="row">
-            <div class="ball">
-                <img id="8ball" src="img/magic8ballQuestion.png" class="img-fluid" />
-                <p id="answer" class="answer">THIS IS WHERE THE ANSWER GOES</p>
-            </div>
-        </div>
-
-        <footer>
+        <div class="footer">
             <p>&copy; Yusuf Kaka, 2023</p>
-        </footer>
+        </div>
     </div>
     <script type="text/javascript" src="lib/script.js"></script>
 </body>
